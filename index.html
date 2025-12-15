@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bannu Enterprises – Premium Stationery Manufacturer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-blue: #0F2A44;
@@ -13,8 +13,8 @@
             --accent-orange: #F7941D;
             --light-orange: #FFB347;
             --light-bg: #f8f9fa;
-            --card-shadow: 0 10px 20px rgba(15, 42, 68, 0.1);
-            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+            --card-shadow: 0 8px 25px rgba(15, 42, 68, 0.12);
+            --transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.1);
         }
 
         * {
@@ -24,7 +24,7 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             color: #333;
             background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
@@ -37,138 +37,184 @@
             max-width: 1200px;
             margin: 0 auto;
             background: white;
-            border-radius: 20px;
+            border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
             position: relative;
             min-height: 950px;
-            transform-style: preserve-3d;
-            perspective: 1000px;
         }
 
-        /* Header with creative design */
-        .header {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+        /* ENHANCED CORPORATE HEADER */
+        .corporate-header {
+            background: linear-gradient(135deg, #0F2A44 0%, #1a3d5e 100%);
             color: white;
-            padding: 40px 40px 30px;
-            text-align: center;
+            padding: 35px 40px 25px;
             position: relative;
             overflow: hidden;
-            min-height: 200px;
+            border-bottom: 5px solid #F7941D;
         }
 
-        .header::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 20%),
-                radial-gradient(circle at 90% 80%, rgba(247, 148, 29, 0.05) 0%, transparent 20%);
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
         }
 
-        .company-name {
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #F7941D 0%, #FFB347 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            box-shadow: 0 5px 15px rgba(247, 148, 29, 0.3);
+        }
+
+        .logo-icon i {
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        .company-info h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 3.2rem;
-            font-weight: 700;
+            font-size: 2.5rem;
+            font-weight: 800;
             letter-spacing: 1px;
-            margin-bottom: 10px;
-            position: relative;
-            z-index: 2;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 5px;
             background: linear-gradient(to right, #fff 0%, #FFB347 100%);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
 
-        .tagline {
-            font-size: 1.3rem;
+        .company-tagline {
+            font-size: 1rem;
             opacity: 0.9;
-            margin-bottom: 15px;
-            position: relative;
-            z-index: 2;
-            font-weight: 300;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
         }
 
-        .established {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--accent-orange) 0%, var(--light-orange) 100%);
+        .contact-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px 20px;
+            border-radius: 10px;
+            border-left: 3px solid #F7941D;
+        }
+
+        .contact-badge p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+
+        .contact-badge i {
+            color: #F7941D;
+            margin-right: 8px;
+        }
+
+        .header-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .header-features {
+            display: flex;
+            gap: 20px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            min-width: 150px;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .feature-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .feature-item i {
+            font-size: 1.5rem;
+            color: #F7941D;
+            margin-bottom: 10px;
+        }
+
+        .feature-item h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .feature-item p {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        .established-badge {
+            background: linear-gradient(135deg, #F7941D 0%, #FFB347 100%);
             color: white;
             padding: 10px 25px;
             border-radius: 30px;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 0.9rem;
             letter-spacing: 1px;
-            position: relative;
-            z-index: 2;
             box-shadow: 0 5px 15px rgba(247, 148, 29, 0.3);
-            transition: var(--transition);
         }
 
-        .established:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(247, 148, 29, 0.4);
-        }
-
-        /* Floating decorative elements */
-        .floating-elements {
+        /* Header decorative elements */
+        .header-pattern {
             position: absolute;
-            width: 100%;
-            height: 100%;
             top: 0;
             left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 80% 70%, rgba(247, 148, 29, 0.05) 0%, transparent 20%);
             pointer-events: none;
-            z-index: 1;
         }
 
-        .floating-element {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 50%;
-        }
-
-        .fe1 { width: 60px; height: 60px; top: 20%; left: 10%; }
-        .fe2 { width: 40px; height: 40px; top: 60%; right: 15%; }
-        .fe3 { width: 30px; height: 30px; bottom: 20%; left: 20%; }
-
-        /* Pages with creative layout */
+        /* Pages */
         .page {
             display: none;
             padding-bottom: 100px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
+            animation: fadeIn 0.5s ease-in-out;
         }
 
         .page.active {
             display: block;
-            opacity: 1;
-            transform: translateY(0);
-            animation: pageEnter 0.7s ease-out forwards;
         }
 
-        @keyframes pageEnter {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
-        /* Section Common Styles */
+        /* Section Styles */
         .section {
             padding: 40px;
-            position: relative;
+            border-bottom: 1px solid #eee;
         }
 
         .section-title {
             font-family: 'Montserrat', sans-serif;
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             color: var(--primary-blue);
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             padding-bottom: 15px;
-            position: relative;
+            border-bottom: 3px solid var(--accent-orange);
             display: flex;
             align-items: center;
         }
@@ -176,34 +222,15 @@
         .section-title i {
             margin-right: 15px;
             color: var(--accent-orange);
-            background: rgba(247, 148, 29, 0.1);
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(to right, var(--accent-orange), var(--light-orange));
-            border-radius: 2px;
         }
 
         .section-subtitle {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             color: var(--secondary-blue);
             margin: 30px 0 20px;
             font-weight: 600;
             position: relative;
-            padding-left: 20px;
+            padding-left: 15px;
         }
 
         .section-subtitle::before {
@@ -212,23 +239,23 @@
             left: 0;
             top: 50%;
             transform: translateY(-50%);
-            width: 8px;
-            height: 8px;
+            width: 5px;
+            height: 5px;
             background: var(--accent-orange);
             border-radius: 50%;
         }
 
-        /* Notebooks Section - Creative Cards */
+        /* Notebook Cards */
         .notebook-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 25px;
             margin-top: 20px;
         }
 
         .notebook-card {
             background: white;
-            border-radius: 15px;
+            border-radius: 10px;
             padding: 25px;
             border: 1px solid rgba(15, 42, 68, 0.1);
             transition: var(--transition);
@@ -237,114 +264,55 @@
             overflow: hidden;
         }
 
-        .notebook-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 5px;
-            height: 100%;
-            background: linear-gradient(to bottom, var(--accent-orange), var(--light-orange));
-            transition: width 0.4s ease;
-        }
-
         .notebook-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
             box-shadow: 0 15px 30px rgba(15, 42, 68, 0.15);
-        }
-
-        .notebook-card:hover::before {
-            width: 100%;
-            opacity: 0.1;
         }
 
         .grade-badge {
             display: inline-block;
-            padding: 6px 15px;
+            padding: 5px 15px;
             border-radius: 20px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
             margin-bottom: 15px;
-            position: relative;
-            z-index: 2;
-            letter-spacing: 0.5px;
         }
 
         .a-grade {
-            background: linear-gradient(135deg, #d4edda 0%, #a8e6a3 100%);
-            color: #155724;
-            box-shadow: 0 3px 10px rgba(21, 87, 36, 0.1);
+            background: #e8f5e9;
+            color: #2e7d32;
+            border: 1px solid #c8e6c9;
         }
 
         .b-grade {
-            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
-            color: #856404;
-            box-shadow: 0 3px 10px rgba(133, 100, 4, 0.1);
+            background: #fff8e1;
+            color: #f57c00;
+            border: 1px solid #ffecb3;
         }
 
         .notebook-card h3 {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             margin-bottom: 10px;
             color: var(--primary-blue);
-            position: relative;
-            z-index: 2;
         }
 
         .notebook-specs {
             list-style: none;
             margin-top: 15px;
-            position: relative;
-            z-index: 2;
         }
 
         .notebook-specs li {
             padding: 8px 0;
-            border-bottom: 1px dashed rgba(15, 42, 68, 0.1);
+            border-bottom: 1px dashed #eee;
             display: flex;
             justify-content: space-between;
-            transition: padding-left 0.3s ease;
-        }
-
-        .notebook-specs li:hover {
-            padding-left: 5px;
         }
 
         .notebook-specs li:last-child {
             border-bottom: none;
         }
 
-        /* Customization note */
-        .customization-note {
-            background: linear-gradient(135deg, rgba(247, 148, 29, 0.1) 0%, rgba(255, 179, 71, 0.1) 100%);
-            border-radius: 15px;
-            padding: 25px;
-            margin-top: 40px;
-            display: flex;
-            align-items: center;
-            border-left: 5px solid var(--accent-orange);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .customization-note::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 100%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 1%, transparent 20%);
-            opacity: 0.5;
-        }
-
-        .customization-note i {
-            color: var(--accent-orange);
-            font-size: 2rem;
-            margin-right: 20px;
-            flex-shrink: 0;
-        }
-
-        /* Registers Section - Creative Layout */
+        /* Registers */
         .register-categories {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -354,54 +322,29 @@
 
         .register-category {
             background: white;
-            border-radius: 15px;
+            border-radius: 10px;
             padding: 25px;
             transition: var(--transition);
             box-shadow: var(--card-shadow);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .register-category::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(to right, var(--accent-orange), var(--light-orange));
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
-            transform-origin: left;
+            border: 1px solid rgba(15, 42, 68, 0.1);
         }
 
         .register-category:hover {
-            transform: translateY(-8px);
+            transform: translateY(-5px);
             box-shadow: 0 12px 25px rgba(15, 42, 68, 0.15);
-        }
-
-        .register-category:hover::after {
-            transform: scaleX(1);
         }
 
         .register-category h4 {
             color: var(--primary-blue);
             margin-bottom: 20px;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             display: flex;
             align-items: center;
         }
 
         .register-category h4 i {
-            margin-right: 12px;
+            margin-right: 10px;
             color: var(--accent-orange);
-            background: rgba(247, 148, 29, 0.1);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .register-list {
@@ -409,308 +352,177 @@
         }
 
         .register-list li {
-            padding: 10px 0;
-            border-bottom: 1px dashed rgba(15, 42, 68, 0.1);
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
             position: relative;
-            padding-left: 25px;
-            transition: padding-left 0.3s ease;
-        }
-
-        .register-list li:hover {
-            padding-left: 30px;
-            color: var(--accent-orange);
+            padding-left: 20px;
         }
 
         .register-list li:before {
             content: "›";
             color: var(--accent-orange);
             font-weight: bold;
-            font-size: 1.2rem;
             position: absolute;
             left: 0;
-            transition: transform 0.3s ease;
         }
 
-        .register-list li:hover:before {
-            transform: translateX(5px);
-        }
-
-        /* Stationery Section - Creative Layout */
+        /* Stationery */
         .brands-container {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
             margin-bottom: 30px;
-            justify-content: center;
         }
 
         .brand-tag {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            background: var(--primary-blue);
             color: white;
-            padding: 12px 25px;
+            padding: 10px 20px;
             border-radius: 30px;
             font-weight: 600;
             display: flex;
             align-items: center;
             transition: var(--transition);
-            box-shadow: 0 5px 15px rgba(15, 42, 68, 0.2);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .brand-tag::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.6s ease;
         }
 
         .brand-tag:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(15, 42, 68, 0.3);
-        }
-
-        .brand-tag:hover::before {
-            left: 100%;
+            background: var(--secondary-blue);
+            transform: translateY(-3px);
         }
 
         .brand-tag i {
-            margin-right: 10px;
+            margin-right: 8px;
             color: var(--accent-orange);
         }
 
         .stationery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 20px;
+            gap: 15px;
         }
 
         .stationery-item {
             background: white;
-            padding: 20px 15px;
-            border-radius: 12px;
+            padding: 15px;
+            border-radius: 8px;
             text-align: center;
             transition: var(--transition);
             border: 1px solid rgba(15, 42, 68, 0.1);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .stationery-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(to right, var(--accent-orange), var(--light-orange));
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
         }
 
         .stationery-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 25px rgba(15, 42, 68, 0.15);
+            background: #f8f9fa;
+            transform: translateY(-5px);
         }
 
-        .stationery-item:hover::before {
-            transform: scaleX(1);
-        }
-
-        /* Why Choose Us - Creative Layout */
+        /* Features */
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            gap: 25px;
             margin-top: 30px;
         }
 
         .feature {
             text-align: center;
-            padding: 30px 25px;
+            padding: 25px 20px;
             background: white;
-            border-radius: 15px;
+            border-radius: 10px;
             transition: var(--transition);
             box-shadow: var(--card-shadow);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .feature::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            z-index: 1;
-        }
-
-        .feature:hover::before {
-            opacity: 0.05;
+            border: 1px solid rgba(15, 42, 68, 0.1);
         }
 
         .feature:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(15, 42, 68, 0.2);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(15, 42, 68, 0.15);
         }
 
         .feature-icon {
-            background: linear-gradient(135deg, var(--accent-orange) 0%, var(--light-orange) 100%);
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
             color: white;
-            width: 70px;
-            height: 70px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 20px;
+            margin: 0 auto 15px;
+            font-size: 1.5rem;
+        }
+
+        /* Customization Note */
+        .customization-note {
+            background: linear-gradient(135deg, rgba(247, 148, 29, 0.1) 0%, rgba(255, 179, 71, 0.1) 100%);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            border-left: 5px solid var(--accent-orange);
+        }
+
+        .customization-note i {
+            color: var(--accent-orange);
             font-size: 1.8rem;
-            position: relative;
-            z-index: 2;
-            box-shadow: 0 8px 20px rgba(247, 148, 29, 0.3);
+            margin-right: 20px;
         }
 
-        .feature h3 {
-            color: var(--primary-blue);
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .feature p {
-            position: relative;
-            z-index: 2;
-            color: #555;
-        }
-
-        /* Page Navigation - Creative Design */
+        /* Page Navigation */
         .page-navigation {
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            background: var(--primary-blue);
             display: flex;
             justify-content: center;
-            padding: 25px;
-            gap: 15px;
-            z-index: 10;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            gap: 10px;
         }
 
         .page-btn {
             background: rgba(255, 255, 255, 0.1);
             border: 2px solid rgba(255, 255, 255, 0.2);
             color: white;
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             font-weight: 700;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             cursor: pointer;
             transition: var(--transition);
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .page-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, var(--accent-orange) 0%, var(--light-orange) 100%);
-            opacity: 0;
-            transition: opacity 0.4s ease;
         }
 
         .page-btn:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
         }
 
         .page-btn.active {
+            background: var(--accent-orange);
+            border-color: var(--accent-orange);
             transform: scale(1.1);
-            box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2), 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
-        .page-btn.active::before {
-            opacity: 1;
-        }
-
-        .page-btn span {
-            position: relative;
-            z-index: 2;
-        }
-
-        .page-btn i {
-            position: relative;
-            z-index: 2;
-            margin-right: 8px;
-            font-size: 1.1rem;
-        }
-
-        /* Footer - Creative Design */
+        /* Footer */
         .footer {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            background: var(--primary-blue);
             color: white;
-            padding: 40px;
+            padding: 30px 40px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: 
-                radial-gradient(circle at 20% 80%, rgba(247, 148, 29, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
-        }
-
-        .footer-column {
-            position: relative;
-            z-index: 2;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
         }
 
         .footer-column h3 {
             color: var(--accent-orange);
-            margin-bottom: 25px;
-            font-size: 1.5rem;
-            font-weight: 600;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background: var(--accent-orange);
-            border-radius: 2px;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
         }
 
         .contact-info {
@@ -718,57 +530,31 @@
         }
 
         .contact-info li {
-            margin-bottom: 18px;
+            margin-bottom: 15px;
             display: flex;
-            align-items: flex-start;
+            align-items: center;
         }
 
         .contact-info i {
             color: var(--accent-orange);
-            margin-right: 15px;
+            margin-right: 12px;
             width: 20px;
-            text-align: center;
-            margin-top: 3px;
-            font-size: 1.1rem;
-        }
-
-        /* Decorative Notebook Icon */
-        .notebook-icon {
-            position: absolute;
-            right: 40px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 80px;
-            height: 100px;
-            background: linear-gradient(135deg, var(--accent-orange) 0%, var(--light-orange) 100%);
-            border-radius: 5px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2rem;
-            opacity: 0.8;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(-50%) translateY(0px); }
-            50% { transform: translateY(-50%) translateY(-10px); }
         }
 
         /* Responsive */
         @media (max-width: 992px) {
-            .company-name {
-                font-size: 2.5rem;
+            .header-main {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .header-features {
+                flex-wrap: wrap;
+                justify-content: center;
             }
             
             .notebook-grid {
                 grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            }
-            
-            .stationery-grid {
-                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             }
         }
 
@@ -777,30 +563,26 @@
                 padding: 30px 25px;
             }
             
-            .header {
-                padding: 30px 25px;
+            .corporate-header {
+                padding: 25px 20px;
             }
             
-            .company-name {
-                font-size: 2.2rem;
+            .header-top {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
             }
             
-            .section-title {
-                font-size: 1.8rem;
+            .company-info h1 {
+                font-size: 2rem;
             }
             
-            .page-btn {
-                width: 50px;
-                height: 50px;
-                font-size: 1.1rem;
+            .feature-item {
+                min-width: 130px;
             }
             
-            .footer {
-                padding: 30px 25px;
-            }
-            
-            .notebook-icon {
-                display: none;
+            .stationery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             }
         }
 
@@ -811,10 +593,6 @@
                 grid-template-columns: 1fr;
             }
             
-            .brands-container {
-                justify-content: center;
-            }
-            
             .features {
                 grid-template-columns: 1fr;
             }
@@ -823,22 +601,64 @@
 </head>
 <body>
     <div class="brochure-container">
-        <!-- Header with creative elements -->
-        <header class="header">
-            <div class="floating-elements">
-                <div class="floating-element fe1"></div>
-                <div class="floating-element fe2"></div>
-                <div class="floating-element fe3"></div>
+        <!-- ENHANCED CORPORATE HEADER -->
+        <header class="corporate-header">
+            <div class="header-pattern"></div>
+            
+            <div class="header-top">
+                <div class="logo-container">
+                    <div class="logo-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="company-info">
+                        <h1>BANNU ENTERPRISES</h1>
+                        <p class="company-tagline">Premium Stationery Manufacturers & Suppliers Since 2005</p>
+                    </div>
+                </div>
+                
+                <div class="contact-badge">
+                    <p><i class="fas fa-phone"></i> +91 XXXXXXXXXX</p>
+                    <p><i class="fas fa-envelope"></i> sales@bannuenterprises.com</p>
+                </div>
             </div>
-            <h1 class="company-name">BANNU ENTERPRISES</h1>
-            <p class="tagline">Crafting Excellence in Stationery Since 2005</p>
-            <div class="established">ADVANCED MACHINERY • BULK INSTITUTIONAL SUPPLY • PREMIUM QUALITY</div>
+            
+            <div class="header-main">
+                <div class="header-features">
+                    <div class="feature-item">
+                        <i class="fas fa-industry"></i>
+                        <h3>Modern Machinery</h3>
+                        <p>Advanced Production</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <i class="fas fa-award"></i>
+                        <h3>Premium Quality</h3>
+                        <p>A-Grade Materials</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <i class="fas fa-shipping-fast"></i>
+                        <h3>Bulk Supply</h3>
+                        <p>Institutional Orders</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <i class="fas fa-edit"></i>
+                        <h3>Custom Printing</h3>
+                        <p>School/College Branding</p>
+                    </div>
+                </div>
+                
+                <div class="established-badge">
+                    ESTABLISHED 2005
+                </div>
+            </div>
         </header>
 
         <!-- Page 1: Notebooks -->
         <div class="page active" id="page1">
-            <div class="section">
-                <h2 class="section-title"><i class="fas fa-book-open"></i> NOTEBOOKS COLLECTION</h2>
+            <section class="section">
+                <h2 class="section-title"><i class="fas fa-book"></i> NOTEBOOKS COLLECTION</h2>
                 
                 <div class="section-subtitle">King Size (18×24) Notebooks</div>
                 <div class="notebook-grid">
@@ -959,14 +779,14 @@
                 </div>
                 
                 <div class="customization-note">
-                    <i class="fas fa-magic"></i>
+                    <i class="fas fa-edit"></i>
                     <div>
                         <h4>Custom Printing Services</h4>
                         <p>All notebooks can be customized with school/college titles, logos, and specific designs. Contact us for personalized quotations and bulk order discounts.</p>
                     </div>
                 </div>
                 
-                <div class="section-subtitle">Specialty Paper Products</div>
+                <div class="section-subtitle">Other Paper Products</div>
                 <div class="stationery-grid">
                     <div class="stationery-item">Record Book</div>
                     <div class="stationery-item">Graph Book</div>
@@ -977,18 +797,17 @@
                     <div class="stationery-item">Drawing Books</div>
                     <div class="stationery-item">Project Files</div>
                 </div>
-            </div>
+            </section>
             
-            <!-- Why Choose Us Section -->
-            <div class="section" style="background: linear-gradient(135deg, #f9fafb 0%, #f1f3f4 100%);">
-                <h2 class="section-title"><i class="fas fa-award"></i> WHY CHOOSE BANNU ENTERPRISES</h2>
+            <section class="section" style="background: #f9f9f9;">
+                <h2 class="section-title"><i class="fas fa-star"></i> WHY CHOOSE US</h2>
                 <div class="features">
                     <div class="feature">
                         <div class="feature-icon">
                             <i class="fas fa-history"></i>
                         </div>
                         <h3>20+ Years Experience</h3>
-                        <p>Established in 2005 with deep industry expertise and commitment to quality</p>
+                        <p>Established in 2005 with deep industry expertise</p>
                     </div>
                     
                     <div class="feature">
@@ -996,15 +815,15 @@
                             <i class="fas fa-cogs"></i>
                         </div>
                         <h3>Modern Machinery</h3>
-                        <p>Advanced automatic machinery for consistent quality and precision</p>
+                        <p>Advanced automatic machinery for consistent quality</p>
                     </div>
                     
                     <div class="feature">
                         <div class="feature-icon">
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-award"></i>
                         </div>
                         <h3>Premium Quality</h3>
-                        <p>A-Grade materials with rigorous quality checks at every stage</p>
+                        <p>A-Grade materials with rigorous quality checks</p>
                     </div>
                     
                     <div class="feature">
@@ -1012,15 +831,15 @@
                             <i class="fas fa-tags"></i>
                         </div>
                         <h3>Competitive Pricing</h3>
-                        <p>Best prices for bulk and institutional orders with volume discounts</p>
+                        <p>Best prices for bulk and institutional orders</p>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
 
         <!-- Page 2: Registers -->
         <div class="page" id="page2">
-            <div class="section">
+            <section class="section">
                 <h2 class="section-title"><i class="fas fa-clipboard-list"></i> REGISTERS COLLECTION</h2>
                 
                 <div class="register-categories">
@@ -1033,7 +852,6 @@
                             <li>Progress Card Register</li>
                             <li>Student Transfer Register</li>
                             <li>Syllabus Register</li>
-                            <li>Examination Register</li>
                         </ul>
                     </div>
                     
@@ -1045,7 +863,6 @@
                             <li>Office Attendance Register</li>
                             <li>Admission Enquiry Register</li>
                             <li>Parent Teacher Meeting Register</li>
-                            <li>Visitor Register</li>
                         </ul>
                     </div>
                     
@@ -1058,7 +875,6 @@
                             <li>Term Fee Register</li>
                             <li>Acquittance Register</li>
                             <li>Increment Register</li>
-                            <li>Order Register</li>
                         </ul>
                     </div>
                 </div>
@@ -1071,7 +887,6 @@
                             <li>Chemistry Lab Register</li>
                             <li>Biology Lab Register</li>
                             <li>Computer Lab Register</li>
-                            <li>Science Lab Register</li>
                         </ul>
                     </div>
                     
@@ -1082,8 +897,6 @@
                             <li>Inward Register</li>
                             <li>Outward Register</li>
                             <li>Diaries</li>
-                            <li>Minutes Register</li>
-                            <li>Correspondence Register</li>
                         </ul>
                     </div>
                     
@@ -1094,7 +907,6 @@
                             <li>Custom Registers (on demand)</li>
                             <li>Hard Bound Registers</li>
                             <li>200/300 Pages Options</li>
-                            <li>Long & King Sizes</li>
                         </ul>
                     </div>
                 </div>
@@ -1103,21 +915,20 @@
                     <i class="fas fa-edit"></i>
                     <div>
                         <h4>Custom Register Design</h4>
-                        <p>All registers can be customized with specific columns, layouts, and institutional branding. Available in Long and King sizes with 200/300 pages and hardbound covers for durability.</p>
+                        <p>All registers can be customized with specific columns, layouts, and institutional branding. Available in Long and King sizes with 200/300 pages.</p>
                     </div>
                 </div>
-            </div>
+            </section>
             
-            <!-- Register Features -->
-            <div class="section" style="background: linear-gradient(135deg, #f9fafb 0%, #f1f3f4 100%);">
-                <h2 class="section-title"><i class="fas fa-check-double"></i> REGISTER FEATURES</h2>
+            <section class="section" style="background: #f9f9f9;">
+                <h2 class="section-title"><i class="fas fa-check-circle"></i> REGISTER FEATURES</h2>
                 <div class="features">
                     <div class="feature">
                         <div class="feature-icon">
-                            <i class="fas fa-file-alt"></i>
+                            <i class="fas fa-book"></i>
                         </div>
                         <h3>A-Grade Paper</h3>
-                        <p>Premium quality paper that prevents ink bleed-through</p>
+                        <p>Premium quality paper for durability</p>
                     </div>
                     
                     <div class="feature">
@@ -1125,7 +936,7 @@
                             <i class="fas fa-layer-group"></i>
                         </div>
                         <h3>Hard Bound Covers</h3>
-                        <p>Sturdy hardbound covers with reinforced binding for long-term use</p>
+                        <p>Sturdy hardbound covers for long-term use</p>
                     </div>
                     
                     <div class="feature">
@@ -1133,34 +944,32 @@
                             <i class="fas fa-ruler-combined"></i>
                         </div>
                         <h3>Multiple Sizes</h3>
-                        <p>Available in Long and King sizes to suit all requirements</p>
+                        <p>Available in Long and King sizes</p>
                     </div>
                     
                     <div class="feature">
                         <div class="feature-icon">
-                            <i class="fas fa-book"></i>
+                            <i class="fas fa-file-alt"></i>
                         </div>
                         <h3>Page Options</h3>
-                        <p>200 or 300 pages as per institutional needs</p>
+                        <p>200 or 300 pages as per requirement</p>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
 
         <!-- Page 3: Stationery -->
         <div class="page" id="page3">
-            <div class="section">
+            <section class="section">
                 <h2 class="section-title"><i class="fas fa-pencil-alt"></i> STATIONERY COLLECTION</h2>
                 
-                <div class="section-subtitle">Premium Brands We Carry</div>
+                <div class="section-subtitle">Premium Brands</div>
                 <div class="brands-container">
-                    <div class="brand-tag"><i class="fas fa-crown"></i> Apsara</div>
-                    <div class="brand-tag"><i class="fas fa-crown"></i> Natraj</div>
-                    <div class="brand-tag"><i class="fas fa-crown"></i> Doms</div>
-                    <div class="brand-tag"><i class="fas fa-crown"></i> Hauser XO</div>
-                    <div class="brand-tag"><i class="fas fa-crown"></i> Flair</div>
-                    <div class="brand-tag"><i class="fas fa-crown"></i> Cello</div>
-                    <div class="brand-tag"><i class="fas fa-crown"></i> Reynolds</div>
+                    <div class="brand-tag"><i class="fas fa-star"></i> Apsara</div>
+                    <div class="brand-tag"><i class="fas fa-star"></i> Natraj</div>
+                    <div class="brand-tag"><i class="fas fa-star"></i> Doms</div>
+                    <div class="brand-tag"><i class="fas fa-star"></i> Hauser XO</div>
+                    <div class="brand-tag"><i class="fas fa-star"></i> Flair</div>
                 </div>
                 
                 <div class="section-subtitle">Writing Instruments</div>
@@ -1168,6 +977,7 @@
                     <div class="stationery-item">Pencils</div>
                     <div class="stationery-item">Erasers</div>
                     <div class="stationery-item">Sharpeners</div>
+                    <div class="stationery-item">Pens</div>
                     <div class="stationery-item">Ball Pens</div>
                     <div class="stationery-item">Gel Pens</div>
                     <div class="stationery-item">Ink Pens</div>
@@ -1176,18 +986,17 @@
                     <div class="stationery-item">Color Pencils</div>
                     <div class="stationery-item">Crayons</div>
                     <div class="stationery-item">Markers</div>
-                    <div class="stationery-item">Highlighters</div>
                 </div>
                 
                 <div class="section-subtitle">School & Office Supplies</div>
                 <div class="stationery-grid">
-                    <div class="stationery-item">Scales & Rulers</div>
+                    <div class="stationery-item">Scales</div>
                     <div class="stationery-item">Geometric Boxes</div>
                     <div class="stationery-item">Fevicol</div>
                     <div class="stationery-item">Feviquick</div>
                     <div class="stationery-item">White Chalk</div>
                     <div class="stationery-item">Color Chalk</div>
-                    <div class="stationery-item">Files & Folders</div>
+                    <div class="stationery-item">Files</div>
                     <div class="stationery-item">Exam Pads</div>
                     <div class="stationery-item">Permanent Marker</div>
                     <div class="stationery-item">Whiteboard Marker</div>
@@ -1196,26 +1005,24 @@
                 </div>
                 
                 <div class="customization-note">
-                    <i class="fas fa-box-open"></i>
+                    <i class="fas fa-boxes"></i>
                     <div>
-                        <h4>Complete Stationery Solutions</h4>
-                        <p>We supply complete stationery kits for schools, colleges, and offices. Contact us for customized stationery packages, bulk pricing, and annual supply contracts with scheduled deliveries.</p>
+                        <h4>Bulk Orders</h4>
+                        <p>We supply complete stationery kits for schools, colleges, and offices. Contact us for customized stationery packages.</p>
                     </div>
                 </div>
-            </div>
+            </section>
             
-            <!-- Contact Section -->
-            <div class="section" style="background: linear-gradient(135deg, #f9fafb 0%, #f1f3f4 100%);">
-                <h2 class="section-title"><i class="fas fa-handshake"></i> PARTNER WITH US</h2>
+            <section class="section" style="background: #f9f9f9;">
+                <h2 class="section-title"><i class="fas fa-address-book"></i> CONTACT INFORMATION</h2>
                 
                 <div class="footer">
                     <div class="footer-column">
                         <h3>Bannu Enterprises</h3>
                         <ul class="contact-info">
-                            <li><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> Telangana, India</li>
-                            <li><i class="fas fa-industry"></i> <strong>Specialization:</strong> Premium Stationery Manufacturing</li>
-                            <li><i class="fas fa-calendar-alt"></i> <strong>Established:</strong> 2005</li>
-                            <li><i class="fas fa-truck"></i> <strong>Delivery:</strong> Pan India</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Telangana, India</li>
+                            <li><i class="fas fa-industry"></i> Manufacturers of Quality Stationery</li>
+                            <li><i class="fas fa-calendar-alt"></i> Established: 2005</li>
                         </ul>
                     </div>
                     
@@ -1224,41 +1031,28 @@
                         <ul class="contact-info">
                             <li><i class="fas fa-phone"></i> <strong>Phone:</strong> +91 XXXXXXXXXX</li>
                             <li><i class="fas fa-envelope"></i> <strong>Email:</strong> sales@bannuenterprises.com</li>
-                            <li><i class="fas fa-clock"></i> <strong>Business Hours:</strong> Mon-Sat, 9:00 AM - 6:00 PM</li>
-                            <li><i class="fas fa-comments"></i> <strong>Support:</strong> Queries answered within 24 hours</li>
+                            <li><i class="fas fa-clock"></i> <strong>Business Hours:</strong> Mon-Sat, 9AM-6PM</li>
                         </ul>
                     </div>
                     
                     <div class="footer-column">
-                        <h3>Our Commitment</h3>
+                        <h3>Our Specialization</h3>
                         <ul class="contact-info">
-                            <li><i class="fas fa-check-circle"></i> Bulk Institutional Supply</li>
-                            <li><i class="fas fa-check-circle"></i> Custom Printing Services</li>
-                            <li><i class="fas fa-check-circle"></i> Competitive Pricing</li>
-                            <li><i class="fas fa-check-circle"></i> Timely Delivery Guarantee</li>
+                            <li><i class="fas fa-check"></i> Bulk Institutional Supply</li>
+                            <li><i class="fas fa-check"></i> Custom Printing</li>
+                            <li><i class="fas fa-check"></i> Competitive Pricing</li>
+                            <li><i class="fas fa-check"></i> Timely Delivery</li>
                         </ul>
                     </div>
                 </div>
-            </div>
-            <div class="notebook-icon">
-                <i class="fas fa-book"></i>
-            </div>
+            </section>
         </div>
 
-        <!-- Creative Page Navigation -->
+        <!-- Page Navigation -->
         <div class="page-navigation">
-            <button class="page-btn active" data-page="1">
-                <i class="fas fa-book"></i>
-                <span>1</span>
-            </button>
-            <button class="page-btn" data-page="2">
-                <i class="fas fa-clipboard-list"></i>
-                <span>2</span>
-            </button>
-            <button class="page-btn" data-page="3">
-                <i class="fas fa-pencil-alt"></i>
-                <span>3</span>
-            </button>
+            <button class="page-btn active" data-page="1">1</button>
+            <button class="page-btn" data-page="2">2</button>
+            <button class="page-btn" data-page="3">3</button>
         </div>
     </div>
 
@@ -1267,93 +1061,26 @@
             const pageButtons = document.querySelectorAll('.page-btn');
             const pages = document.querySelectorAll('.page');
             
-            // Function to switch page with animation
             function switchPage(pageNumber) {
-                // Add exit animation to current active page
-                const activePage = document.querySelector('.page.active');
-                if (activePage) {
-                    activePage.style.opacity = '0';
-                    activePage.style.transform = 'translateY(-20px)';
-                    setTimeout(() => {
-                        activePage.classList.remove('active');
-                        
-                        // Show new page
-                        const newPage = document.getElementById(`page${pageNumber}`);
-                        newPage.classList.add('active');
-                        
-                        // Reset animation properties for entrance
-                        setTimeout(() => {
-                            newPage.style.opacity = '1';
-                            newPage.style.transform = 'translateY(0)';
-                        }, 50);
-                    }, 300);
-                }
+                pages.forEach(page => {
+                    page.classList.remove('active');
+                });
                 
-                // Update active button
+                document.getElementById(`page${pageNumber}`).classList.add('active');
+                
                 pageButtons.forEach(btn => {
                     btn.classList.remove('active');
                     if (btn.getAttribute('data-page') === pageNumber.toString()) {
                         btn.classList.add('active');
                     }
                 });
-                
-                // Update URL hash for bookmarking
-                window.location.hash = `page${pageNumber}`;
             }
             
-            // Add click event to page buttons
             pageButtons.forEach(button => {
                 button.addEventListener('click', function() {
                     const pageNumber = this.getAttribute('data-page');
                     switchPage(pageNumber);
                 });
-            });
-            
-            // Check URL hash on load
-            if (window.location.hash) {
-                const hash = window.location.hash.replace('#page', '');
-                if (hash && ['1', '2', '3'].includes(hash)) {
-                    switchPage(hash);
-                }
-            }
-            
-            // Add keyboard navigation
-            document.addEventListener('keydown', function(e) {
-                const currentPage = document.querySelector('.page-btn.active').getAttribute('data-page');
-                
-                if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-                    e.preventDefault();
-                    const nextPage = parseInt(currentPage) < 3 ? parseInt(currentPage) + 1 : 1;
-                    switchPage(nextPage);
-                } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-                    e.preventDefault();
-                    const prevPage = parseInt(currentPage) > 1 ? parseInt(currentPage) - 1 : 3;
-                    switchPage(prevPage);
-                } else if (e.key >= '1' && e.key <= '3') {
-                    e.preventDefault();
-                    switchPage(e.key);
-                }
-            });
-            
-            // Add hover effect to all cards
-            const cards = document.querySelectorAll('.notebook-card, .register-category, .stationery-item, .feature');
-            cards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.zIndex = '10';
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    this.style.zIndex = '1';
-                });
-            });
-            
-            // Add floating animation to decorative elements
-            const floatingElements = document.querySelectorAll('.floating-element');
-            floatingElements.forEach((el, index) => {
-                // Randomize animation
-                const duration = 3 + Math.random() * 2;
-                const delay = Math.random() * 2;
-                el.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
             });
         });
     </script>
